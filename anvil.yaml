@@ -5,7 +5,9 @@ scheduled_tasks:
     every: day
     at: {minute: 0, hour: 0}
   job_id: QMOVVXJA
-dependencies: []
+dependencies:
+- app_id: RLHEKZ27BW4V5UWS
+  version: {dev: false}
 services:
 - source: /runtime/services/tables.yml
   client_config: {enable_v2: true}
@@ -19,9 +21,10 @@ services:
 startup: {type: form, module: HomePage}
 package_name: VehicleMaint
 allow_embedding: false
-name: Clone of VehicleMaint
+name: Vehicle-Maintenance
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
-metadata: {title: Vehicle Maintenance, logo_img: 'asset:mikey.jpeg'}
+metadata: {title: Vehicle Maintenance, logo_img: 'asset:2019 Honda Pilot Elite_007
+    635.png'}
 startup_form: null
 db_schema:
   vehicle_maint:
@@ -66,3 +69,8 @@ db_schema:
     - name: name
       admin_ui: {width: 200}
       type: string
+  table_4:
+    title: Table 4
+    client: none
+    server: full
+    columns: []
