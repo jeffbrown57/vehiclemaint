@@ -1,0 +1,44 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: Label
+  properties: {}
+  name: label_driver
+  layout_properties: {grid_position: 'SFMQIG,EQTDQD'}
+  data_bindings:
+  - {property: text, code: 'self.item[''driver'']'}
+- type: Label
+  properties: {}
+  name: label_vehicle
+  layout_properties: {grid_position: 'SFMQIG,VRPRXD'}
+  data_bindings:
+  - {property: text, code: 'self.item[''vehicle'']'}
+- type: Label
+  properties: {}
+  name: label_inspection
+  layout_properties: {grid_position: 'RYAAJV,OTEOYY'}
+- type: Label
+  properties: {}
+  name: label_registration
+  layout_properties: {grid_position: 'RYAAJV,LTUJNH'}
+- type: Label
+  properties: {}
+  name: label_repairs
+  layout_properties: {grid_position: 'QRGQMF,DQMGIA'}
+  data_bindings:
+  - {property: text, code: 'self.item[''repairs'']'}
+- type: FlowPanel
+  properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+  name: flow_panel_1
+  layout_properties: {grid_position: 'QRGQMF,KTRONC'}
+  components:
+  - type: Button
+    properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Edit, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_edit
+    layout_properties: {}
+is_package: true

@@ -1,0 +1,68 @@
+scheduled_tasks:
+- task_name: alert_upcoming_inspections
+  time_spec:
+    n: 1
+    every: day
+    at: {minute: 0, hour: 0}
+  job_id: QMOVVXJA
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {enable_v2: true}
+  server_config: {}
+- source: /runtime/services/google.yml
+  client_config: {}
+  server_config: {}
+- source: /runtime/services/anvil/email.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: HomePage}
+package_name: VehicleMaint
+allow_embedding: false
+name: Clone of VehicleMaint
+runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
+metadata: {title: Vehicle Maintenance, logo_img: 'asset:mikey.jpeg'}
+startup_form: null
+db_schema:
+  vehicle_maint:
+    title: vehicle_maint
+    client: none
+    server: full
+    columns:
+    - name: vehicle
+      admin_ui: {width: 200}
+      type: string
+    - name: driver
+      admin_ui: {width: 200}
+      type: string
+    - name: registration
+      admin_ui: {width: 200}
+      type: date
+    - name: inspection
+      admin_ui: {width: 200}
+      type: date
+    - name: repairs
+      admin_ui: {width: 200}
+      type: string
+    - name: updated
+      admin_ui: {width: 200}
+      type: datetime
+    - name: cost
+      admin_ui: {width: 200}
+      type: number
+  owners:
+    title: owners
+    client: search
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200}
+      type: string
+  vehicles:
+    title: vehicles
+    client: search
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200}
+      type: string
