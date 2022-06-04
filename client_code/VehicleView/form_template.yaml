@@ -75,7 +75,7 @@ components:
     name: label_cost
     layout_properties: {grid_position: 'KLPDVY,EGTOVM'}
     data_bindings:
-    - {property: text, code: 'f"Repair Cost: {self.item[''cost'']}"'}
+    - {property: text, code: 'f"Cost: {self.item[''cost'']}"'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: blue,
       visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
