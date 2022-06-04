@@ -24,6 +24,9 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-full,
 metadata: {title: Vehicle Maintenance, logo_img: 'asset:2019 Honda Pilot Elite_007
     635.png'}
 startup_form: null
+native_deps: {head_html: "<script type=\"text/javascript\">\n  function getAddr()\
+    \ {\n     addr = \"101 Shellridge Drive\\nEast Amherst, NY\";\n     return addr;\n\
+    \  }\n  \n</script>"}
 db_schema:
   vehicle_maint:
     title: vehicle_maint

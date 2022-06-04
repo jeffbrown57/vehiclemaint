@@ -15,6 +15,8 @@ class HomePage(HomePageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    # must use call_js on custom html form
+    self.label_2.text = anvil.js.call('getAddr') # func() in natives libs
     self.refresh_vehicles()
     
     # Any code you write here will run when the form opens.
