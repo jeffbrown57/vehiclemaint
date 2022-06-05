@@ -1,3 +1,4 @@
+import anvil.secrets
 import anvil.email
 import anvil.google.auth, anvil.google.drive, anvil.google.mail
 from anvil.google.drive import app_files
@@ -6,7 +7,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from datetime import datetime, timedelta
-import pymongo
+from pymongo import MongoClient
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
@@ -94,3 +95,13 @@ def alert_upcoming_inspections():
   #vehicle['reminder_sent'] = True
   
   ## HTTP-ENDPOINTS HERE 
+@anvil.server.http_endpoint('/getveh')
+def get_coll():
+  """ get recs from pymongo """
+  atlas_secret = anvil.secrets.get_secret('atlas_secret')
+  print(atlas_secret)
+  client = MongoClient(f"mongodb+srv://jbrow57:{atlas_secret}@cluster0.4q4rz.mongodb.net/")
+  db = client.for_anvil
+  #collection = client.coll_for_anvil
+  coll =  db.list_collection_names()[0]
+  return coll.find_one()

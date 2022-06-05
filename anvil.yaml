@@ -16,6 +16,9 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
+- source: /runtime/services/anvil/secrets.yml
+  client_config: {}
+  server_config: {}
 startup: {type: form, module: HomePage}
 package_name: VehicleMaint
 allow_embedding: false
@@ -82,3 +85,7 @@ db_schema:
     - name: vin
       admin_ui: {width: 200}
       type: string
+secrets:
+  atlas_secret:
+    value: {? '' : UlSeCMjJEf32tftllMndLEVSJ5U175DOdy00EJfPq3KeT6j7oBMuSEUF5svjmaDLgd5IgbDXQRmbvsLnxuicbfeJ3MO5VASlvWIl6pQTPKsDTZVrdta8xCeg3LDrmid9H2hplSlluL5WGA4Xzyo=}
+    type: secret
