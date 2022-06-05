@@ -54,6 +54,10 @@ db_schema:
     - name: cost
       admin_ui: {width: 200}
       type: number
+    - name: Column7
+      admin_ui: {width: 200}
+      type: link_single
+      target: vehicle_vin
   owners:
     title: owners
     client: search
@@ -70,8 +74,11 @@ db_schema:
     - name: name
       admin_ui: {width: 200}
       type: string
-  table_4:
-    title: Table 4
+  vehicle_vin:
+    title: vehicle_vin
     client: none
     server: full
-    columns: []
+    columns:
+    - name: vin
+      admin_ui: {width: 200}
+      type: string
