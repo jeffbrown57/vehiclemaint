@@ -17,8 +17,11 @@ class RowTemplate1(RowTemplate1Template):
   def link_vin_click(self, **event_args):
     """This method is called when the link is clicked"""
     data_row = anvil.server.call('get_vin', self.item['vehicle'])
-    self.auto_display_data
-    Notification("Vehicle Vin").show()
+    #self.auto_display_data
+    if data_row:
+      Notification(f"<b>Vehicle Vin:</b> <font color='blue'> {data_row} </font>").show()
+    #except TypeError:
+    #  Notification("No Vin data supplied.").show()
     #print(data_row)
     pass
 

@@ -11,7 +11,7 @@ unique_ids:
     VehicleView.ItemTemplate1.ItemTemplate2: '1653521068554835931975373.9478'
   modules: {}
   server_modules:
-    VehicleController: '1653474572922377491154536.12146'
+    ServerVehicle: '1653474572922377491154536.12146'
   assets:
     2019 Honda Pilot Elite_007 635.png: '1654365681902558966931216.5269'
     2019 Honda Pilot Elite_007 635.webp: '1654365599725150880570098.25916'

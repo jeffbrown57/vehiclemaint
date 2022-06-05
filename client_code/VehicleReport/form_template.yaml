@@ -8,23 +8,28 @@ components:
   layout_properties: {grid_position: 'ZONTAR,WRRSPN'}
   components:
   - type: Label
-    properties: {role: headline, align: center, tooltip: '', border: '', foreground: brown,
-      visible: true, text: Vehicle Report, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: beige, bold: false,
-      underline: false, icon: ''}
+    properties: {role: headline, align: center, tooltip: '', border: solid green,
+      foreground: brown, visible: true, text: Vehicle Report, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: beige, bold: false, underline: false, icon: ''}
     name: label_1
     layout_properties: {grid_position: 'YBGEPY,KTIGNH'}
 - type: DataGrid
   properties:
     role: null
     columns:
-    - {id: WYSGJL, title: Vehicle, data_key: vehicle, $$hashKey: 'object:7512'}
-    - {id: LXBPQX, title: Driver, data_key: driver, $$hashKey: 'object:7513'}
-    - {id: HHWWGE, title: Registration, data_key: registration, $$hashKey: 'object:7514'}
-    - {id: RZOHUN, title: Inspection, data_key: inspection, $$hashKey: 'object:7515'}
-    - {id: UPQOFX, title: Repairs, data_key: repairs, $$hashKey: 'object:7516'}
-    - {id: TRDQUW, title: Updated, data_key: updated, $$hashKey: 'object:7517'}
-    - {id: PWAUZH, title: Cost, data_key: cost, $$hashKey: 'object:7518'}
+    - {id: WYSGJL, title: Vehicle, data_key: vehicle, $$hashKey: 'object:7512', width: 73,
+      expand: false}
+    - {id: LXBPQX, title: Driver, data_key: driver, $$hashKey: 'object:7513', width: 68,
+      expand: false}
+    - {id: HHWWGE, title: Registration, data_key: registration, $$hashKey: 'object:7514',
+      width: 94, expand: false}
+    - {id: RZOHUN, title: Inspection, data_key: inspection, $$hashKey: 'object:7515',
+      width: 86, expand: false}
+    - {id: PWAUZH, title: Cost, data_key: cost, $$hashKey: 'object:7518', width: 61,
+      expand: false}
+    - {id: UPQOFX, title: Repairs, data_key: repairs, $$hashKey: 'object:7516', width: 210,
+      expand: false}
     - {id: PICPUI, title: VIN#, data_key: column_1, $$hashKey: 'object:19603'}
     auto_header: true
     tooltip: ''
@@ -38,10 +43,12 @@ components:
     spacing_below: small
     background: lightgreen
   name: data_grid_1
-  layout_properties: {grid_position: 'ECWLKE,AQWTWZ'}
+  layout_properties: {grid_position: 'MQFFAE,QPHULY'}
   components:
   - type: RepeatingPanel
-    properties: {spacing_above: none, spacing_below: none, item_template: VehicleReport.RowTemplate1}
+    properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+      visible: true, spacing_above: none, spacing_below: none, item_template: VehicleReport.RowTemplate1,
+      background: beige}
     name: repeating_panel_cars
     layout_properties: {}
 is_package: true

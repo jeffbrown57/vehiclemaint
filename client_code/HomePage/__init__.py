@@ -79,12 +79,8 @@ class HomePage(HomePageTemplate):
 
   def button_report_click(self, **event_args):
     """This method is called when the button is clicked"""
-    saved_click = alert(
-      content = VehicleReport(),
-      large = True,
-      title = 'Vehicle Report',
-      )
-    
+    form = VehicleReport()
+    open_form(form)   
     pass
 
 

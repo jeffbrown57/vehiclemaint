@@ -71,6 +71,7 @@ def get_vin(vehicle):
   #car = self.item['vehicle'] ## server modules have no self. 
   car_row =  app_tables.vehicle_maint.get(vehicle=vehicle) 
   return car_row['vin']['vin']
+  
     
 # Scheduled Tasks here ....
 @anvil.server.background_task
