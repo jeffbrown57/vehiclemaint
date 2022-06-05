@@ -83,7 +83,6 @@ class HomePage(HomePageTemplate):
       content = VehicleReport(),
       large = True,
       title = 'Vehicle Report',
-      role = maintain,
       )
     
     pass
