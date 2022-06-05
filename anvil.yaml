@@ -54,7 +54,7 @@ db_schema:
     - name: cost
       admin_ui: {width: 200}
       type: number
-    - name: Column7
+    - name: vin
       admin_ui: {width: 200}
       type: link_single
       target: vehicle_vin

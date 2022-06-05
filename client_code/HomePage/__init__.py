@@ -8,6 +8,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from ..VehicleEdit import VehicleEdit
 from ..NewVehicleAdd import NewVehicleAdd
+from ..VehicleReport import VehicleReport
 
 anvil.google.auth.login()
 
@@ -75,6 +76,18 @@ class HomePage(HomePageTemplate):
       anvil.server.call('add_new_vehicle', new_vehicle)
       Notification("Vehicles Updated (Add) !!").show()
     pass
+
+  def button_report_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    saved_click = alert(
+      content = VehicleReport(),
+      large = True,
+      title = 'Vehicle Report',
+      role = maintain,
+      )
+    
+    pass
+
 
 
 
