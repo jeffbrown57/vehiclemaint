@@ -8,6 +8,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from datetime import datetime, timedelta
+from .ModuleVehicle import JSONEncoder
 from pymongo import MongoClient
 import json
 
@@ -107,7 +108,10 @@ def get_coll():
   #collection = client.coll_for_anvil
   #coll =  db.list_collection_names()[0]
   ret_dict = db.coll_for_anvil.find_one()
-  response = anvil.server.HttpResponse(200, ret_dict)
+  response = JSONEncoder().encode(ret_dict)
+  #response_json = json.encode(resp, cls=JSONEncoder)
+
+  response = anvil.server.HttpResponse(200, response)
   response.headers['Content-Type'] = 'application/json'
   return response
   
