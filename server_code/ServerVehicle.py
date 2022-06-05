@@ -103,5 +103,5 @@ def get_coll():
   client = MongoClient(f"mongodb+srv://jbrow57:{atlas_secret}@cluster0.4q4rz.mongodb.net/")
   db = client.for_anvil
   #collection = client.coll_for_anvil
-  coll =  db.list_collection_names()[0]
-  return coll.find_one()
+  #coll =  db.list_collection_names()[0]
+  return db.coll_for_anvil.find_one()
