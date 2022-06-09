@@ -28,7 +28,8 @@ class VehicleView(VehicleViewTemplate):
     )
     if save_clicked:
       row = anvil.server.call('update_vehicle', self.item, vehicle_copy)
-      self.refresh_data_bindings()
+      print(self.item['cost'])
+      #self.refresh_data_bindings()
       if row:
         Notification('Vehicle record updated.').show()
         
