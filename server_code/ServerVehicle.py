@@ -51,8 +51,8 @@ def update_vehicle(vehicle, vehicle_dict):
   # check that the article given is really a row in the ‘articles’ table
   if app_tables.vehicle_maint.has_row(vehicle):
     vehicle_dict['updated'] = datetime.now()    # row will be automatically created if not exist
-    x = vehicle.update(**vehicle_dict)
-    print(x)
+    vehicle.update(**vehicle_dict)
+    #print(x)
   else:
     raise Exception('Vehicle does not exist')
                     
