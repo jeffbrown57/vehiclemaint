@@ -12,7 +12,8 @@ class VehicleView(VehicleViewTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    
+    #if self.item['vehicle']['vin']:
+     # self.label_vin.text = self.item['vehicle']['vin']
 
     # Any code you write here will run when the form opens.
 
@@ -29,7 +30,7 @@ class VehicleView(VehicleViewTemplate):
     if save_clicked:
       row = anvil.server.call('update_vehicle', self.item, vehicle_copy)
       print(self.item)
-      #self.refresh_data_bindings()
+      self.refresh_data_bindings()
       if row:
         Notification('Vehicle record updated.').show()
         

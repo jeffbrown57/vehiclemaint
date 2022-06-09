@@ -66,9 +66,13 @@ components:
       underline: false
       include_placeholder: true
     name: drop_down_vehicle
-    layout_properties: {grid_position: 'VHYWBO,NWIEYH'}
+    layout_properties: {grid_position: 'VHYWBO,NWIEYH XLKYDK,KVOYMC'}
     data_bindings:
     - {property: selected_value, code: 'self.item[''vehicle'']', writeback: true}
+  - type: Label
+    properties: {}
+    name: label_3
+    layout_properties: {grid_position: 'VHYWBO,NWIEYH JFNOGU,WAANXX'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Registration, font_size: null, font: '', spacing_above: small,

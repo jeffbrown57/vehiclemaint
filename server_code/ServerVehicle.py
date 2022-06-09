@@ -47,12 +47,11 @@ def add_vehicle_maint(vehicle_dict):
      return row
     
 @anvil.server.callable
-def update_vehicle(vehicle, vehicle_dict):
+def update_vehicle(vehicle_row, vehicle_dict):
   # check that the article given is really a row in the ‘articles’ table
-  if app_tables.vehicle_maint.has_row(vehicle):
+  if app_tables.vehicle_maint.has_row(vehicle_row):
     vehicle_dict['updated'] = datetime.now()    # row will be automatically created if not exist
-    vehicle.update(**vehicle_dict)
-    #print(x)
+    vehicle_row.update(**vehicle_dict)
   else:
     raise Exception('Vehicle does not exist')
                     

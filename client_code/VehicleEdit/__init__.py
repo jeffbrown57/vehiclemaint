@@ -10,9 +10,9 @@ from anvil.tables import app_tables
 class VehicleEdit(VehicleEditTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    self.init_components(**properties)
+    self.init_components(**properties)    
 
     # Any code you write here will run when the form opens.
     self.drop_down_driver.items = [ x['name'] for x in app_tables.owners.search()]
     self.drop_down_vehicle.items = [ x['name'] for x in app_tables.vehicles.search()]
-
+    self.label_3.visible = False
