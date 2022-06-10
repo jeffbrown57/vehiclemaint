@@ -31,8 +31,9 @@ native_deps: {head_html: "<script type=\"text/javascript\">\n  function getAddr(
     \ {\n    localStorage.setItem(\"Name\", \"Jeff Brown\")\n    localStorage.setItem(\"\
     Addr\", \"101 Shellridge Drive\\nEast Amherst, NY 14051\");\n    \n    return\
     \ localStorage.getItem(\"Name\"), localStorage.getItem(\"Addr\");\n  }\n  \n \
-    \ \n  async function getText(url) {\n  let x = await fetch(url);\n  let y = await\
-    \ x.text();\n  }  \n</script>"}
+    \ \n async function fetchText() {\n    let response = await fetch('https://jblearn-app.herokuapp.com/files/name.html');\n\
+    \    let data = await response.text();\n    return data;\n    console.log(data);\n\
+    }\n</script>"}
 db_schema:
   vehicle_maint:
     title: vehicle_maint

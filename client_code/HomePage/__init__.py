@@ -17,7 +17,7 @@ class HomePage(HomePageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # must use call_js on custom html form
-    address = anvil.js.call("getText('http://192.168.1.50:8000/name.html')") 
+    address = anvil.js.call("fetchText") 
     self.label_addr.text = address
     self.refresh_vehicles()
     
