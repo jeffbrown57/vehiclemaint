@@ -28,8 +28,11 @@ metadata: {title: Vehicle Maintenance, logo_img: 'asset:2019 Honda Pilot Elite_0
     635.png'}
 startup_form: null
 native_deps: {head_html: "<script type=\"text/javascript\">\n  function getAddr()\
-    \ {\n    addr = \"Jeff Brown\\n\" ;\n    addr += \"101 Shellridge Drive\\nEast\
-    \ Amherst, NY 14051\";\n    \n    return addr;\n  }\n  \n</script>"}
+    \ {\n    localStorage.setItem(\"Name\", \"Jeff Brown\")\n    localStorage.setItem(\"\
+    Addr\", \"101 Shellridge Drive\\nEast Amherst, NY 14051\");\n    \n    return\
+    \ localStorage.getItem(\"Name\"), localStorage.getItem(\"Addr\");\n  }\n  \n \
+    \ \n  async function getText(url) {\n  let x = await fetch(url);\n  let y = await\
+    \ x.text();\n  }  \n</script>"}
 db_schema:
   vehicle_maint:
     title: vehicle_maint
