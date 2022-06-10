@@ -69,11 +69,11 @@ def get_vehicles():
   return app_tables.vehicle_maint.search()
 
 @anvil.server.callable
-def get_vin(vehicle):
+def get_vin(vehicle_row):
   """  get vehicle vin """
   #car = self.item['vehicle'] ## server modules have no self. 
-  car_row =  app_tables.vehicle_maint.get(vehicle=vehicle) 
-  return car_row['vin']['vin']
+  car_row =  [ x['vin'] for x in app_tables.vehicle_maint.search(vehicle=self.item['vin'])]
+  return car_row
   
     
 # Scheduled Tasks here ....

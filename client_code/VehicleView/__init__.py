@@ -12,8 +12,9 @@ class VehicleView(VehicleViewTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    #if self.item['vehicle']['vin']:
-     # self.label_vin.text = self.item['vehicle']['vin']
+    #vin_row = app_tables.vehicle_maint.get(vehicle=)
+    #if self.item['vehicle'][0]:
+      #self.label_vin.text = self.item['vehicle']['vin']
 
     # Any code you write here will run when the form opens.
 
