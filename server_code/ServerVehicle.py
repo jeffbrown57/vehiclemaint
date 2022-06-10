@@ -72,7 +72,7 @@ def get_vehicles():
 def get_vin(vehicle_row):
   """  get vehicle vin """
   #car = self.item['vehicle'] ## server modules have no self. 
-  car_row =  [ x['vin'] for x in app_tables.vehicle_maint.search(vehicle=self.item['vin'])]
+  #car_row =  [ x['vin'] for x in app_tables.vehicle_maint.search(vehicle=self.item['vin'])]
   return car_row
   
     

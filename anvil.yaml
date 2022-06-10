@@ -33,7 +33,7 @@ native_deps: {head_html: "<script type=\"text/javascript\">\n  function getAddr(
 db_schema:
   vehicle_maint:
     title: vehicle_maint
-    client: none
+    client: search
     server: full
     columns:
     - name: vehicle
