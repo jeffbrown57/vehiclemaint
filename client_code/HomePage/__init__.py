@@ -10,7 +10,7 @@ from ..VehicleEdit import VehicleEdit
 from ..NewVehicleAdd import NewVehicleAdd
 from ..VehicleReport import VehicleReport
 
-anvil.google.auth.login()
+#anvil.google.auth.login()
 
 class HomePage(HomePageTemplate):
   def __init__(self, **properties):

@@ -7,12 +7,15 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
+from anvil_extras import augment
+
 class RowTemplate1(RowTemplate1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+    augment.set_event_handler(self.link_vin, 'hover', self.link_hover)
 
   def link_vin_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -27,6 +30,12 @@ class RowTemplate1(RowTemplate1Template):
     #  Notification("No Vin data supplied.").show()
     #print(data_row)
     pass
+
+  def link_hover(self, **event_args):
+    if 'enter' in event_args['event_type']:
+      self.link_vin.text = 'Get Vin'
+    else:
+      self.link_vin.text = 'Get Vin_out'
 
   
 
