@@ -33,9 +33,9 @@ class RowTemplate1(RowTemplate1Template):
 
   def link_hover(self, **event_args):
     if 'enter' in event_args['event_type']:
-      self.link_vin.text = 'Get Vin'
-    else:
       self.link_vin.text = 'Get Vin_out'
+    else:
+      self.link_vin.text = 'Get Vin'
 
   
 
