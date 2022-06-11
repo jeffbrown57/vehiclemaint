@@ -5,7 +5,9 @@ scheduled_tasks:
     every: day
     at: {minute: 0, hour: 0}
   job_id: QMOVVXJA
-dependencies: []
+dependencies:
+- app_id: C6ZZPAPN4YYF5NVJ
+  version: {dev: false}
 services:
 - source: /runtime/services/tables.yml
   client_config: {enable_v2: true}
