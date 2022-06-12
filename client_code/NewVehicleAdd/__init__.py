@@ -1,6 +1,7 @@
 from ._anvil_designer import NewVehicleAddTemplate
 from anvil import *
 import anvil.server
+import anvil.js
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.tables as tables
@@ -13,3 +14,4 @@ class NewVehicleAdd(NewVehicleAddTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+    self.label_2.text = anvil.js('getGitJS')

@@ -32,8 +32,10 @@ startup_form: null
 native_deps: {head_html: "<script type=\"text/javascript\">\n  function getAddr()\
     \ {\n    localStorage.setItem(\"Name\", \"Jeff Brown\")\n    localStorage.setItem(\"\
     Addr\", \"101 Shellridge Drive\\nEast Amherst, NY 14051\");\n    \n    return\
-    \ localStorage.getItem(\"Name\"), localStorage.getItem(\"Addr\");\n  }\n  \n \n\
-    \  \n async function fetchText() {\n    let response = await fetch('https://jblearn-app.herokuapp.com/files/name.html');\n\
+    \ localStorage.getItem(\"Name\"), localStorage.getItem(\"Addr\");\n  }\n  \n function\
+    \ retGitJS() {\n   fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')\n\
+    \  .then(response => response.json())\n  .then(commits => alert(commits[0].author.login));\n\
+    \ }\n  \n async function fetchText() {\n    let response = await fetch('https://jblearn-app.herokuapp.com/files/name.html');\n\
     \    let data = await response.text();\n    return data;\n    console.log(data);\n\
     }\n</script>"}
 db_schema:

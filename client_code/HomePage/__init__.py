@@ -86,6 +86,11 @@ class HomePage(HomePageTemplate):
     open_form(form)   
     pass
 
+  def form_show(self, **event_args):
+    """This method is called when the HTML panel is shown on the screen"""
+    pass
+
+
   
 
 

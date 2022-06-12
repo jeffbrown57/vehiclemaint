@@ -23,4 +23,20 @@ components:
     layout_properties: {grid_position: 'XEKOAE,XXYKBV'}
     data_bindings:
     - {property: text, code: 'self.item[''name'']', writeback: true}
+- type: ColumnPanel
+  properties: {role: card, col_widths: '{}'}
+  name: card_2
+  layout_properties: {grid_position: 'EIFIZX,BAMLNA'}
+  components:
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: Javascript Playground, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: lightgray,
+      bold: false, underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'ZJKVGT,ZFYAEY'}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {grid_position: 'GXCLVI,CDIIIU'}
 is_package: true
