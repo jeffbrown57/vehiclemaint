@@ -10,7 +10,7 @@ from ..VehicleEdit import VehicleEdit
 from ..NewVehicleAdd import NewVehicleAdd
 from ..VehicleReport import VehicleReport
 
-from anvil.js.window import fetchText
+#from anvil.js.window import fetchText
 
 #anvil.google.auth.login()
 

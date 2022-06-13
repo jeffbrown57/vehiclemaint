@@ -35,10 +35,10 @@ native_deps: {head_html: "<script type=\"text/javascript\">\n  function getAddr(
     \ localStorage.getItem(\"Name\"), localStorage.getItem(\"Addr\");\n  }\n  \n function\
     \ retGitJS() {\n   fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')\n\
     \    .then(response => response.text())\n    .then(commits => alert(response);\n\
-    \    //.then(commits => alert(commits[0].author.login));\n }\n  \n async function\
-    \ fetchText() {\n    let response = await fetch('https://jblearn-app.herokuapp.com/files/name.html');\n\
-    \    let data = await response.text();\n    return data;\n    console.log(data);\n\
-    }\n</script>"}
+    \    //.then(commits => alert(commits[0].author.login));\n }\n  \nasync function\
+    \ fetchText() {\n  let response = await fetch(\"https://jblearn-app.herokuapp.com/files/name.html\"\
+    );\n  let data = await response.text();\n  \n  console.log(data);\n  //document.getElementById(\"\
+    getme\").innerHTML = data;\n}\n</script>"}
 db_schema:
   vehicle_maint:
     title: vehicle_maint
