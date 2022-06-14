@@ -11,7 +11,7 @@ from ..NewVehicleAdd import NewVehicleAdd
 from ..VehicleReport import VehicleReport
 import anvil.js
 
-from anvil.js.window import fetchText
+from anvil.js.window import getAddr
 
 #anvil.google.auth.login()
 
@@ -20,8 +20,8 @@ class HomePage(HomePageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # must use call_js on custom html form
-    #address = anvil.js.call("fetchText") 
-    #self.label_addr.text = address
+    address = anvil.js.call("fetchText") 
+    self.label_addr.text = address
     self.refresh_vehicles()
     
     # Any code you write here will run when the form opens.
