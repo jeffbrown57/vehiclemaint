@@ -33,9 +33,9 @@ native_deps: {head_html: "<script>\n  function getAddr() {\n    localStorage.set
     Name\", \"Jeff Brown\")\n    localStorage.setItem(\"Addr\", \"101 Shellridge Drive\\\
     nEast Amherst, NY 14051\");\n    \n    return localStorage.getItem(\"Name\");\n\
     \  }\n  \n function retGitJS() {\n   fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')\n\
-    \    .then(response => response.text())\n    .then(commits => alert(response);\n\
+    \    .then(response => response.text())\n    .then(commits => alert(response));\n\
     \    //.then(commits => alert(commits[0].author.login));\n }\n  \nfunction fetchText()\
-    \ {\n  const data = \"this sucks!\";\n  return data;\n}\n</script>"}
+    \ {\n  const data = \"Honda's are awesome.\";\n  return data;\n}\n</script>"}
 db_schema:
   vehicle_maint:
     title: vehicle_maint
