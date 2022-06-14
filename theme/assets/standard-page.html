@@ -66,4 +66,12 @@
   .then(response => response.json())
   .then(commits => alert(commits[0].author.login));
  }
+  
+  async function fetchText() {
+  let response = await fetch("https://jblearn-app.herokuapp.com/files/name.html");
+  let data = await response.text();
+  
+  console.log(data);
+  //document.getElementById("getme").innerHTML = data;
+}
 </script>
