@@ -9,7 +9,7 @@ from anvil.tables import app_tables
 from ..VehicleEdit import VehicleEdit
 from ..NewVehicleAdd import NewVehicleAdd
 from ..VehicleReport import VehicleReport
-##import anvil.js
+import anvil.js
 
 from anvil.js.window import fetchText
 

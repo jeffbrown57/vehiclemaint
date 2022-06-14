@@ -29,15 +29,13 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-full,
 metadata: {title: Vehicle Maintenance, logo_img: 'asset:2019 Honda Pilot Elite_007
     635.png'}
 startup_form: null
-native_deps: {head_html: "<script type=\"text/javascript\">\n  function getAddr()\
-    \ {\n    localStorage.setItem(\"Name\", \"Jeff Brown\")\n    localStorage.setItem(\"\
-    Addr\", \"101 Shellridge Drive\\nEast Amherst, NY 14051\");\n    \n    return\
-    \ localStorage.getItem(\"Name\");\n  }\n  \n function retGitJS() {\n   fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')\n\
+native_deps: {head_html: "<script>\n  function getAddr() {\n    localStorage.setItem(\"\
+    Name\", \"Jeff Brown\")\n    localStorage.setItem(\"Addr\", \"101 Shellridge Drive\\\
+    nEast Amherst, NY 14051\");\n    \n    return localStorage.getItem(\"Name\");\n\
+    \  }\n  \n function retGitJS() {\n   fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')\n\
     \    .then(response => response.text())\n    .then(commits => alert(response);\n\
-    \    //.then(commits => alert(commits[0].author.login));\n }\n  \n  async function\
-    \ fetchText() {\n  let response = await fetch(\"https://jblearn-app.herokuapp.com/files/name.html\"\
-    );\n  let data = await response.text();\n  \n  console.log(data);\n  //document.getElementById(\"\
-    getme\").innerHTML = data;\n}\n</script>"}
+    \    //.then(commits => alert(commits[0].author.login));\n }\n  \nfunction fetchText()\
+    \ {\n  const data = \"this sucks!\";\n  return data;\n}\n</script>"}
 db_schema:
   vehicle_maint:
     title: vehicle_maint
