@@ -91,6 +91,28 @@ db_schema:
     - name: vin
       admin_ui: {width: 200}
       type: string
+  registration:
+    title: registration
+    client: none
+    server: full
+    columns:
+    - name: vehicle
+      admin_ui: {width: 200}
+      type: string
+    - name: date
+      admin_ui: {width: 200}
+      type: date
+  inspection:
+    title: inspection
+    client: none
+    server: full
+    columns:
+    - name: vehicle
+      admin_ui: {width: 200}
+      type: string
+    - name: date
+      admin_ui: {width: 200}
+      type: date
 secrets:
   atlas_secret:
     value: {? '' : UlSeCMjJEf32tftllMndLEVSJ5U175DOdy00EJfPq3KeT6j7oBMuSEUF5svjmaDLgd5IgbDXQRmbvsLnxuicbfeJ3MO5VASlvWIl6pQTPKsDTZVrdta8xCeg3LDrmid9H2hplSlluL5WGA4Xzyo=}
