@@ -48,9 +48,6 @@ db_schema:
     - name: driver
       admin_ui: {width: 200}
       type: string
-    - name: registration
-      admin_ui: {width: 200}
-      type: date
     - name: inspection
       admin_ui: {width: 200}
       type: date
