@@ -71,7 +71,7 @@ components:
     name: label_inspection
     layout_properties: {grid_position: 'YSHAYR,RPZLGR'}
     data_bindings:
-    - {property: text, code: 'f"Inspection Due: {self.item[''inspection'']}"'}
+    - {property: text, code: 'f"Inspection Due: {self.item[''inspection_fk''][''date'']}"'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: brown,
       visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,

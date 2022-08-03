@@ -48,9 +48,6 @@ db_schema:
     - name: driver
       admin_ui: {width: 200}
       type: string
-    - name: inspection
-      admin_ui: {width: 200}
-      type: date
     - name: repairs
       admin_ui: {width: 200}
       type: string
@@ -60,10 +57,18 @@ db_schema:
     - name: cost
       admin_ui: {width: 200}
       type: number
+    - name: registration_fk
+      admin_ui: {width: 200}
+      type: link_single
+      target: registration
     - name: vin
       admin_ui: {width: 200}
       type: link_single
       target: vehicle_vin
+    - name: inspection_fk
+      admin_ui: {width: 200}
+      type: link_single
+      target: inspection
   owners:
     title: owners
     client: search
