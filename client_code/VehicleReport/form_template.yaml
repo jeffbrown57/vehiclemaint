@@ -13,7 +13,15 @@ components:
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: beige, bold: false, underline: false, icon: ''}
     name: label_1
-    layout_properties: {grid_position: 'YBGEPY,KTIGNH'}
+    layout_properties: {grid_position: 'UDIDCB,KFXNES'}
+  - type: Link
+    properties: {role: null, url: '', align: right, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: 'fa:home'}
+    name: link_home
+    layout_properties: {grid_position: 'UDIDCB,EYARFP'}
+    event_bindings: {click: link_home_click}
 - type: DataGrid
   properties:
     role: null

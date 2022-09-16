@@ -8,4 +8,12 @@ components:
   name: link_vin
   layout_properties: {column: PICPUI}
   event_bindings: {click: link_vin_click}
+- type: Label
+  properties: {}
+  name: label_reg
+  layout_properties: {column: HHWWGE}
+- type: Label
+  properties: {}
+  name: label_insp
+  layout_properties: {column: RZOHUN}
 is_package: true

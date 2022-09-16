@@ -16,8 +16,8 @@ class VehicleSummary(VehicleSummaryTemplate):
     # Any code you write here will run when the form opens.
     self.label_1.text = f"Driver: {self.item['driver']}"
     self.label_2.text = f"Vehicle: {self.item['vehicle']}"
-    self.label_3.text = f"Registration: {self.item['registration']}"
-    self.label_4.text = f"Inspection: {self.item['inspection']}"
+    self.label_3.text = f"Registration: {self.item['registration_fk']['date']}"
+    self.label_4.text = f"Inspection: {self.item['inspection_fk']['date']}"
     self.label_5.text = self.item['repairs']
 
   def button_edit_click(self, **event_args):

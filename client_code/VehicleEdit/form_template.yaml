@@ -89,7 +89,7 @@ components:
     name: date_picker_regis
     layout_properties: {grid_position: 'JDXGYC,MIWJPZ'}
     data_bindings:
-    - {property: date, code: 'self.item[''registration'']', writeback: true}
+    - {property: date, code: 'self.item[''registration_fk''][''date'']', writeback: true}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Inspection, font_size: null, font: '', spacing_above: small,
@@ -105,7 +105,7 @@ components:
     name: date_picker_inspect
     layout_properties: {grid_position: 'ZMAEEZ,FOZWGI'}
     data_bindings:
-    - {property: date, code: 'self.item[''inspection'']', writeback: true}
+    - {property: date, code: 'self.item[''inspection_fk''][''date'']', writeback: true}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Repairs, font_size: null, font: '', spacing_above: small,

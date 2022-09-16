@@ -91,6 +91,12 @@ class HomePage(HomePageTemplate):
     """This method is called when the HTML panel is shown on the screen"""
     pass
 
+  def link_home_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      open_form('HomePage')
+      pass
+
+
 
   
 
