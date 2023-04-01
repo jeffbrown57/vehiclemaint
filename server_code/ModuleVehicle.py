@@ -16,4 +16,4 @@ class JSONEncoder(json.JSONEncoder):
             return str(o)
         return json.JSONEncoder.default(self, o)
 
-#JSONEncoder().encode(analytics)
+JSONEncoder().encode('analytics')
