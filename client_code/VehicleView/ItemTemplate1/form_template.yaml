@@ -18,6 +18,8 @@ components:
   properties: {}
   name: label_inspection
   layout_properties: {grid_position: 'RYAAJV,OTEOYY'}
+  data_bindings:
+  - {property: text, code: 'self.item[''inspection_fk'']'}
 - type: Label
   properties: {}
   name: label_registration

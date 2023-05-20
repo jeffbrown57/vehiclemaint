@@ -16,4 +16,4 @@ class NewVehicleAdd(NewVehicleAddTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    self.label_2.text = retGitJS()
+    #self.label_2.text = retGitJS()

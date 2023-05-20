@@ -106,6 +106,7 @@ components:
     layout_properties: {grid_position: 'ZMAEEZ,FOZWGI'}
     data_bindings:
     - {property: date, code: 'self.item[''inspection_fk''][''date'']', writeback: true}
+    event_bindings: {change: date_picker_inspect_change}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Repairs, font_size: null, font: '', spacing_above: small,

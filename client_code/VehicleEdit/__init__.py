@@ -21,3 +21,7 @@ class VehicleEdit(VehicleEditTemplate):
     if  fetchText():
       self.label_3.visible = True
       self.label_3.text = fetchText()
+
+  def date_picker_inspect_change(self, **event_args):
+      """This method is called when the selected date changes"""
+      pass

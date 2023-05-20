@@ -15,8 +15,8 @@ class RowTemplate1(RowTemplate1Template):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    self.label_insp.text = self.item['inspection_fk']['date']
-    self.label_reg.text = self.item['registration_fk']['date']
+    #self.label_insp.text = self.item['inspection_fk']['date']
+    #self.label_reg.text = self.item['registration_fk']['date']
     augment.set_event_handler(self.link_vin, 'hover', self.link_hover)
 
   def link_vin_click(self, **event_args):
