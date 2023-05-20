@@ -43,8 +43,8 @@ def get_vehicle_maint():
 @anvil.server.callable
 def add_vehicle_maint(vehicle_dict):
    if vehicle_dict['driver'] and vehicle_dict['vehicle']:
-     row = app_tables.vehicle_maint.add_row(**vehicle_dict)
-     return row
+     row_id = app_tables.vehicle_maint.add_row(**vehicle_dict)
+     return row_id
     
 @anvil.server.callable
 def update_vehicle(vehicle_row, vehicle_dict):

@@ -13,7 +13,7 @@ class VehicleView(VehicleViewTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     costx = self.item['cost']
-    print(type(costx))
+    #print(type(costx))
     if ( type(costx) == 'float' ) :
       cost_fix = f"{round(costx,2)}"
       self.label_cost.text = cost_fix
