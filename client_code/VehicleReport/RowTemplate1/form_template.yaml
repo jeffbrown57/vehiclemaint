@@ -12,8 +12,12 @@ components:
   properties: {}
   name: label_reg
   layout_properties: {column: HHWWGE}
+  data_bindings:
+  - {property: text, code: 'self.item[''reg_due'']'}
 - type: Label
   properties: {}
   name: label_insp
   layout_properties: {column: RZOHUN}
+  data_bindings:
+  - {property: text, code: 'self.item[''insp_due'']'}
 is_package: true

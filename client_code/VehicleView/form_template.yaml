@@ -61,7 +61,8 @@ components:
       icon: ''}
     name: label_registration
     layout_properties: {grid_position: 'YSHAYR,NNRXUO'}
-    data_bindings: []
+    data_bindings:
+    - {property: text, code: 'f"Reg Due: {self.item[''reg_due'']}"'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: brown,
       visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
@@ -69,7 +70,8 @@ components:
       icon: ''}
     name: label_inspection
     layout_properties: {grid_position: 'YSHAYR,RPZLGR'}
-    data_bindings: []
+    data_bindings:
+    - {property: text, code: 'f"Insp Due: {self.item[''insp_due'']}"'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: brown,
       visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
