@@ -103,7 +103,8 @@ def get_coll():
   """ get recs from pymongo """
   atlas_secret = anvil.secrets.get_secret('atlas_secret')
   #print(atlas_secret)
-  client = MongoClient(f"mongodb+srv://jbrow57:{atlas_secret}@cluster0.4q4rz.mongodb.net/")
+  #mongodb+srv://jbrow57:<password>@cluster0.gl6iu.mongodb.net/
+  client = MongoClient(f"mongodb+srv://jbrow57:{atlas_secret}@cluster0.gl6iu.mongodb.net/")
   db = client.for_anvil
   #collection = client.coll_for_anvil
   #coll =  db.list_collection_names()[0]
