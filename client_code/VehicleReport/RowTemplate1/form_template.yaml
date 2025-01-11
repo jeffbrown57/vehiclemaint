@@ -1,23 +1,20 @@
-container: {type: DataRowPanel}
 components:
-- type: Link
-  properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
-    visible: true, text: Get Vin, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
-    spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
-    italic: false, background: '', bold: false, underline: false, icon: 'fa:search'}
-  name: link_vin
+- event_bindings: {click: link_vin_click}
   layout_properties: {column: PICPUI}
-  event_bindings: {click: link_vin_click}
-- type: Label
-  properties: {}
-  name: label_reg
+  name: link_vin
+  properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: '', icon: 'fa:search', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Get Vin, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+  type: Link
+- data_bindings:
+  - {code: 'self.item[''reg_due'']', property: text}
   layout_properties: {column: HHWWGE}
-  data_bindings:
-  - {property: text, code: 'self.item[''reg_due'']'}
-- type: Label
+  name: label_reg
   properties: {}
-  name: label_insp
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''insp_due'']', property: text}
   layout_properties: {column: RZOHUN}
-  data_bindings:
-  - {property: text, code: 'self.item[''insp_due'']'}
+  name: label_insp
+  properties: {}
+  type: Label
+container: {type: DataRowPanel}
 is_package: true

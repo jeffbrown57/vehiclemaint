@@ -1,46 +1,42 @@
-container:
-  type: ColumnPanel
-  properties: {col_widths: '{}'}
 components:
-- type: Label
-  properties: {}
-  name: label_driver
+- data_bindings:
+  - {code: 'self.item[''driver'']', property: text}
   layout_properties: {grid_position: 'SFMQIG,EQTDQD'}
-  data_bindings:
-  - {property: text, code: 'self.item[''driver'']'}
-- type: Label
+  name: label_driver
   properties: {}
-  name: label_vehicle
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''vehicle'']', property: text}
   layout_properties: {grid_position: 'SFMQIG,VRPRXD'}
-  data_bindings:
-  - {property: text, code: 'self.item[''vehicle'']'}
-- type: Label
+  name: label_vehicle
   properties: {}
-  name: label_inspection
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''inspection_fk'']', property: text}
   layout_properties: {grid_position: 'RYAAJV,OTEOYY'}
-  data_bindings:
-  - {property: text, code: 'self.item[''inspection_fk'']'}
-- type: Label
+  name: label_inspection
   properties: {}
+  type: Label
+- layout_properties: {grid_position: 'RYAAJV,LTUJNH'}
   name: label_registration
-  layout_properties: {grid_position: 'RYAAJV,LTUJNH'}
-- type: Label
   properties: {}
-  name: label_repairs
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''repairs'']', property: text}
   layout_properties: {grid_position: 'QRGQMF,DQMGIA'}
-  data_bindings:
-  - {property: text, code: 'self.item[''repairs'']'}
-- type: FlowPanel
-  properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
-    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
-  name: flow_panel_1
-  layout_properties: {grid_position: 'QRGQMF,KTRONC'}
-  components:
-  - type: Button
-    properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Edit, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
+  name: label_repairs
+  properties: {}
+  type: Label
+- components:
+  - layout_properties: {}
     name: button_edit
-    layout_properties: {}
+    properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: primary-color, spacing_above: small, spacing_below: small, text: Edit, tooltip: '', underline: false, visible: true}
+    type: Button
+  layout_properties: {grid_position: 'QRGQMF,KTRONC'}
+  name: flow_panel_1
+  properties: {align: right, background: '', border: '', foreground: '', role: null, spacing: medium, spacing_above: small, spacing_below: small, tooltip: '', visible: true}
+  type: FlowPanel
+container:
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
 is_package: true

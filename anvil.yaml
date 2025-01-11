@@ -1,128 +1,121 @@
-scheduled_tasks:
-- task_name: alert_upcoming_inspections
-  time_spec:
-    n: 1
-    every: day
-    at: {minute: 0, hour: 0}
-  job_id: QMOVVXJA
+allow_embedding: false
+db_schema:
+  inspection:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: vehicle
+      type: string
+    - admin_ui: {width: 200}
+      name: date
+      type: date
+    server: full
+    title: inspection
+  owners:
+    client: search
+    columns:
+    - admin_ui: {width: 200}
+      name: name
+      type: string
+    server: full
+    title: owners
+  registration:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: vehicle
+      type: string
+    - admin_ui: {width: 200}
+      name: date
+      type: date
+    server: full
+    title: registration
+  vehicle_maint:
+    client: search
+    columns:
+    - admin_ui: {width: 200}
+      name: vehicle
+      type: string
+    - admin_ui: {width: 200}
+      name: driver
+      type: string
+    - admin_ui: {width: 200}
+      name: repairs
+      type: string
+    - admin_ui: {width: 200}
+      name: updated
+      type: datetime
+    - admin_ui: {width: 200}
+      name: cost
+      type: number
+    - admin_ui: {width: 200}
+      name: registration_fk
+      target: registration
+      type: link_single
+    - admin_ui: {width: 200}
+      name: vin
+      target: vehicle_vin
+      type: link_single
+    - admin_ui: {width: 200}
+      name: inspection_fk
+      target: inspection
+      type: link_single
+    - admin_ui: {order: 8, width: 200}
+      name: insp_due
+      type: date
+    - admin_ui: {order: 9, width: 200}
+      name: reg_due
+      type: date
+    server: full
+    title: vehicle_maint
+  vehicle_vin:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: vin
+      type: string
+    server: full
+    title: vehicle_vin
+  vehicles:
+    client: search
+    columns:
+    - admin_ui: {width: 200}
+      name: name
+      type: string
+    server: full
+    title: vehicles
 dependencies:
 - app_id: C6ZZPAPN4YYF5NVJ
   version: {dev: false}
-services:
-- source: /runtime/services/tables.yml
-  client_config: {enable_v2: true}
-  server_config: {}
-- source: /runtime/services/google.yml
-  client_config: {}
-  server_config: {}
-- source: /runtime/services/anvil/email.yml
-  client_config: {}
-  server_config: {}
-- source: /runtime/services/anvil/secrets.yml
-  client_config: {}
-  server_config: {}
-startup: {type: form, module: HomePage}
-package_name: VehicleMaint
-allow_embedding: false
+metadata: {logo_img: 'asset:2019 Honda Pilot Elite_007 635.png', title: Vehicle Maintenance}
 name: Vehicle-Maintenance
-runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
-metadata: {title: Vehicle Maintenance, logo_img: 'asset:2019 Honda Pilot Elite_007
-    635.png'}
-startup_form: null
-native_deps: {head_html: "<script>\nfunction getAddr() {\n    localStorage.setItem(\"\
-    Name\", \"Jeff Brown\")\n    localStorage.setItem(\"Addr\", \"101 Shellridge Drive\\\
-    nEast Amherst, NY 14051\");\n    \n    return localStorage.getItem(\"Name\");\n\
-    \  }\n  \nfunction retGitJS() {\n   fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')\n\
-    \    .then(response => response.text())\n    .then(commits => alert(response));\n\
-    \    //.then(commits => alert(commits[0].author.login));\n }\n  \nfunction fetchText()\
-    \ {\n  const data = \"Honda's are awesome.\";\n  //anvil.call_js('called_by_js');\n\
-    \  return data;\n}\n</script>"}
-db_schema:
-  vehicle_maint:
-    title: vehicle_maint
-    client: search
-    server: full
-    columns:
-    - name: vehicle
-      admin_ui: {width: 200}
-      type: string
-    - name: driver
-      admin_ui: {width: 200}
-      type: string
-    - name: repairs
-      admin_ui: {width: 200}
-      type: string
-    - name: updated
-      admin_ui: {width: 200}
-      type: datetime
-    - name: cost
-      admin_ui: {width: 200}
-      type: number
-    - name: registration_fk
-      admin_ui: {width: 200}
-      type: link_single
-      target: registration
-    - name: vin
-      admin_ui: {width: 200}
-      type: link_single
-      target: vehicle_vin
-    - name: inspection_fk
-      admin_ui: {width: 200}
-      type: link_single
-      target: inspection
-    - name: insp_due
-      admin_ui: {order: 8, width: 200}
-      type: date
-    - name: reg_due
-      admin_ui: {order: 9, width: 200}
-      type: date
-  owners:
-    title: owners
-    client: search
-    server: full
-    columns:
-    - name: name
-      admin_ui: {width: 200}
-      type: string
-  vehicles:
-    title: vehicles
-    client: search
-    server: full
-    columns:
-    - name: name
-      admin_ui: {width: 200}
-      type: string
-  vehicle_vin:
-    title: vehicle_vin
-    client: none
-    server: full
-    columns:
-    - name: vin
-      admin_ui: {width: 200}
-      type: string
-  registration:
-    title: registration
-    client: none
-    server: full
-    columns:
-    - name: vehicle
-      admin_ui: {width: 200}
-      type: string
-    - name: date
-      admin_ui: {width: 200}
-      type: date
-  inspection:
-    title: inspection
-    client: none
-    server: full
-    columns:
-    - name: vehicle
-      admin_ui: {width: 200}
-      type: string
-    - name: date
-      admin_ui: {width: 200}
-      type: date
+native_deps:
+  head_html: "<script>\nfunction getAddr() {\n    localStorage.setItem(\"Name\", \"Jeff Brown\")\n    localStorage.setItem(\"Addr\", \"101 Shellridge Drive\\nEast Amherst, NY 14051\");\n    \n    return localStorage.getItem(\"Name\");\n  }\n  \nfunction retGitJS() {\n   fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')\n    .then(response => response.text())\n    .then(commits => alert(response));\n    //.then(commits => alert(commits[0].author.login));\n }\n  \nfunction fetchText() {\n  const data = \"Honda's are awesome.\";\n  //anvil.call_js('called_by_js');\n  return data;\n}\n</script>"
+package_name: VehicleMaint
+runtime_options: {client_version: '3', server_spec: null, server_version: python3-full, version: 2}
+scheduled_tasks:
+- job_id: QMOVVXJA
+  task_name: alert_upcoming_inspections
+  time_spec:
+    at: {hour: 0, minute: 0}
+    every: day
+    n: 1
 secrets:
   atlas_secret:
-    value: {? '' : UlSeCMjJEf32tftllMndLEVSJ5U175DOdy00EJfPq3KeT6j7oBMuSEUF5svjmaDLgd5IgbDXQRmbvsLnxuicbfeJ3MO5VASlvWIl6pQTPKsDTZVrdta8xCeg3LDrmid9H2hplSlluL5WGA4Xzyo=}
     type: secret
+    value: {? '' : UlSeCMjJEf32tftllMndLEVSJ5U175DOdy00EJfPq3KeT6j7oBMuSEUF5svjmaDLgd5IgbDXQRmbvsLnxuicbfeJ3MO5VASlvWIl6pQTPKsDTZVrdta8xCeg3LDrmid9H2hplSlluL5WGA4Xzyo=}
+services:
+- client_config: {enable_v2: true}
+  server_config: {}
+  source: /runtime/services/tables.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/google.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/anvil/email.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/anvil/secrets.yml
+startup: {module: HomePage, type: form}
+startup_form: null

@@ -1,144 +1,111 @@
-container:
-  type: ColumnPanel
-  properties: {col_widths: '{}'}
 components:
-- type: ColumnPanel
-  properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"MNJKTL":20,"HXHIPF":40}',
-    spacing_below: small, background: ''}
-  name: card_1
-  layout_properties: {grid_position: 'EDMVAU,RQRIPX', row_background: lightblue}
-  components:
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Driver, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+- components:
+  - layout_properties: {grid_position: 'DXNOZC,YHMBZJ'}
     name: label_driver
-    layout_properties: {grid_position: 'DXNOZC,YHMBZJ'}
-  - type: DropDown
-    properties:
-      role: null
-      align: full
-      tooltip: ''
-      placeholder: Select vehicle owner ..
-      border: ''
-      enabled: true
-      foreground: ''
-      items: []
-      visible: true
-      font_size: null
-      font: ''
-      spacing_above: small
-      spacing_below: small
-      italic: false
-      background: beige
-      bold: false
-      underline: false
-      include_placeholder: true
-    name: drop_down_driver
+    properties: {align: left, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Driver, tooltip: '', underline: false, visible: true}
+    type: Label
+  - data_bindings:
+    - {code: 'self.item[''driver'']', property: selected_value, writeback: true}
     layout_properties: {grid_position: 'DXNOZC,AJYSLK'}
-    data_bindings:
-    - {property: selected_value, code: 'self.item[''driver'']', writeback: true}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Vehicle, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_1
-    layout_properties: {grid_position: 'VHYWBO,CJSSIQ'}
-  - type: DropDown
+    name: drop_down_driver
     properties:
-      role: null
       align: full
-      tooltip: ''
-      placeholder: select vehicle ..
-      border: ''
-      enabled: true
-      foreground: ''
-      items: []
-      visible: true
-      font_size: null
-      font: ''
-      spacing_above: small
-      spacing_below: small
-      italic: false
       background: beige
       bold: false
-      underline: false
+      border: ''
+      enabled: true
+      font: ''
+      font_size: null
+      foreground: ''
       include_placeholder: true
-    name: drop_down_vehicle
+      italic: false
+      items: []
+      placeholder: Select vehicle owner ..
+      role: null
+      spacing_above: small
+      spacing_below: small
+      tooltip: ''
+      underline: false
+      visible: true
+    type: DropDown
+  - layout_properties: {grid_position: 'VHYWBO,CJSSIQ'}
+    name: label_1
+    properties: {align: left, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Vehicle, tooltip: '', underline: false, visible: true}
+    type: Label
+  - data_bindings:
+    - {code: 'self.item[''vehicle'']', property: selected_value, writeback: true}
     layout_properties: {grid_position: 'VHYWBO,NWIEYH XLKYDK,KVOYMC'}
-    data_bindings:
-    - {property: selected_value, code: 'self.item[''vehicle'']', writeback: true}
-  - type: Label
-    properties: {}
+    name: drop_down_vehicle
+    properties:
+      align: full
+      background: beige
+      bold: false
+      border: ''
+      enabled: true
+      font: ''
+      font_size: null
+      foreground: ''
+      include_placeholder: true
+      italic: false
+      items: []
+      placeholder: select vehicle ..
+      role: null
+      spacing_above: small
+      spacing_below: small
+      tooltip: ''
+      underline: false
+      visible: true
+    type: DropDown
+  - layout_properties: {grid_position: 'VHYWBO,NWIEYH JFNOGU,WAANXX'}
     name: label_3
-    layout_properties: {grid_position: 'VHYWBO,NWIEYH JFNOGU,WAANXX'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Registration, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {}
+    type: Label
+  - layout_properties: {grid_position: 'JDXGYC,CINIHB'}
     name: label_registration
-    layout_properties: {grid_position: 'JDXGYC,CINIHB'}
-  - type: DatePicker
-    properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: '',
-      placeholder: registration due .., border: '', enabled: true, foreground: '',
-      visible: true, font_size: null, font: '', spacing_above: small, spacing_below: small,
-      italic: false, date: '', min_date: '', background: beige, bold: false, underline: false,
-      format: '%m/%d/%Y'}
-    name: date_picker_regis
+    properties: {align: left, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Registration, tooltip: '', underline: false, visible: true}
+    type: Label
+  - data_bindings:
+    - {code: 'self.item[''reg_due'']', property: date, writeback: true}
     layout_properties: {grid_position: 'JDXGYC,MIWJPZ'}
-    data_bindings:
-    - {property: date, code: 'self.item[''reg_due'']', writeback: true}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Inspection, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    name: date_picker_regis
+    properties: {align: left, background: beige, bold: false, border: '', date: '', enabled: true, font: '', font_size: null, foreground: '', format: '%m/%d/%Y', italic: false, max_date: '', min_date: '', pick_time: false, placeholder: registration due .., role: null, spacing_above: small, spacing_below: small, tooltip: '', underline: false, visible: true}
+    type: DatePicker
+  - layout_properties: {grid_position: 'ZMAEEZ,KEGPNF'}
     name: label_inspect
-    layout_properties: {grid_position: 'ZMAEEZ,KEGPNF'}
-  - type: DatePicker
-    properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: '',
-      placeholder: inspection due .., border: '', enabled: true, foreground: '', visible: true,
-      font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
-      date: '', min_date: '', background: beige, bold: false, underline: false, format: '%m/%d/%Y'}
-    name: date_picker_inspect
-    layout_properties: {grid_position: 'ZMAEEZ,FOZWGI'}
-    data_bindings:
-    - {property: date, code: 'self.item[''insp_due'']', writeback: true}
+    properties: {align: left, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Inspection, tooltip: '', underline: false, visible: true}
+    type: Label
+  - data_bindings:
+    - {code: 'self.item[''insp_due'']', property: date, writeback: true}
     event_bindings: {change: date_picker_inspect_change}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Repairs, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    layout_properties: {grid_position: 'ZMAEEZ,FOZWGI'}
+    name: date_picker_inspect
+    properties: {align: left, background: beige, bold: false, border: '', date: '', enabled: true, font: '', font_size: null, foreground: '', format: '%m/%d/%Y', italic: false, max_date: '', min_date: '', pick_time: false, placeholder: inspection due .., role: null, spacing_above: small, spacing_below: small, tooltip: '', underline: false, visible: true}
+    type: DatePicker
+  - layout_properties: {grid_position: 'LROYDC,QSLDAL IJYSAP,AYNLYL'}
     name: label_repairs
-    layout_properties: {grid_position: 'LROYDC,QSLDAL IJYSAP,AYNLYL'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Repair Cost, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {align: left, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Repairs, tooltip: '', underline: false, visible: true}
+    type: Label
+  - layout_properties: {grid_position: 'LROYDC,QSLDAL TGGKIK,MNJKTL'}
     name: label_2
-    layout_properties: {grid_position: 'LROYDC,QSLDAL TGGKIK,MNJKTL'}
-  - type: TextBox
-    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: repair cost ..,
-      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
-      background: beige, bold: false, underline: false}
-    name: text_box_cost
+    properties: {align: left, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Repair Cost, tooltip: '', underline: false, visible: true}
+    type: Label
+  - data_bindings:
+    - {code: 'self.item[''cost'']', property: text, writeback: true}
     layout_properties: {grid_position: 'LROYDC,QSLDAL TGGKIK,HXHIPF'}
-    data_bindings:
-    - {property: text, code: 'self.item[''cost'']', writeback: true}
-  - type: TextArea
-    properties: {role: null, align: left, height: 82, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
-      background: beige, bold: false, underline: false}
-    name: text_area_repair
+    name: text_box_cost
+    properties: {align: left, background: beige, bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: repair cost .., role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: number, underline: false, visible: true}
+    type: TextBox
+  - data_bindings:
+    - {code: 'self.item[''repairs'']', property: text, writeback: true}
     layout_properties: {grid_position: 'LROYDC,SQGUYU'}
-    data_bindings:
-    - {property: text, code: 'self.item[''repairs'']', writeback: true}
+    name: text_area_repair
+    properties: {align: left, auto_expand: false, background: beige, bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', height: 82, italic: false, placeholder: '', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    type: TextArea
+  layout_properties: {grid_position: 'EDMVAU,RQRIPX', row_background: lightblue}
+  name: card_1
+  properties: {background: '', border: '', col_spacing: medium, col_widths: '{"MNJKTL":20,"HXHIPF":40}', foreground: '', role: card, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+  type: ColumnPanel
+container:
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
 is_package: true
