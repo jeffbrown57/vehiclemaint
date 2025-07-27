@@ -25,3 +25,9 @@ class VehicleEdit(VehicleEditTemplate):
   def date_picker_inspect_change(self, **event_args):
       """This method is called when the selected date changes"""
       pass
+
+
+class Registration(app_tables.registration.Row):
+    
+    for veh in app_tables.registration.search():
+        print(f"{veh['vehicle']} registration is  due{veh.date}")
