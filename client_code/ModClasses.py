@@ -1,17 +1,9 @@
 import anvil.server
-import anvil.google.auth, anvil.google.drive
-from anvil.google.drive import app_files
-import anvil.tables as tables
-import anvil.tables.query as q
+import anvil.tables
 from anvil.tables import app_tables
-# This is a module.
-# You can define variables and functions here, and use them from any form. For example, in a top-level form:
-#
-#    from .. import Module1
-#
-#    Module1.say_hello()
-#
 
+class Registration(app_tables.registration.Row):
+  """ this is a model class"""
 
-def say_hello():
-    print("Hello, world")
+  for veh in app_tables.registration.search():
+    print(f"{veh['vehicle']} registration is  due{veh.date}")

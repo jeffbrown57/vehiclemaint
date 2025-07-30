@@ -6,6 +6,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ..ModClasses import Registration
 
 from anvil.js.window import fetchText
 
@@ -27,7 +28,3 @@ class VehicleEdit(VehicleEditTemplate):
       pass
 
 
-class Registration(app_tables.registration.Row):
-    
-    for veh in app_tables.registration.search():
-        print(f"{veh['vehicle']} registration is  due{veh.date}")
