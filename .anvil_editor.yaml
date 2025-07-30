@@ -15,7 +15,8 @@ unique_ids:
     VehicleView: '1653521031811636594857144.92'
     VehicleView.ItemTemplate1: '1653521055530816357508577.2358'
     VehicleView.ItemTemplate1.ItemTemplate2: '1653521068554835931975373.9478'
-  modules: {}
+  modules:
+    ModClasses: '1753879290164674254914707.6593'
   scripts: {}
   server_modules:
     ModuleVehicle: '1654449042735630894352833.3229'
