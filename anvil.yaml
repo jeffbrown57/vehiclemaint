@@ -86,7 +86,7 @@ db_schema:
     title: vehicles
 dependencies:
 - app_id: C6ZZPAPN4YYF5NVJ
-  version: {dev: false}
+  version: {version_tag: v3.4.3}
 metadata: {logo_img: 'asset:2019 Honda Pilot Elite_007 635.png', title: Vehicle Maintenance}
 name: Vehicle-Maintenance
 native_deps:
