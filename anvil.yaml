@@ -92,7 +92,11 @@ name: Vehicle-Maintenance
 native_deps:
   head_html: "<script>\nfunction getAddr() {\n    localStorage.setItem(\"Name\", \"Jeff Brown\")\n    localStorage.setItem(\"Addr\", \"101 Shellridge Drive\\nEast Amherst, NY 14051\");\n    \n    return localStorage.getItem(\"Name\");\n  }\n  \nfunction retGitJS() {\n   fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')\n    .then(response => response.text())\n    .then(commits => alert(response));\n    //.then(commits => alert(commits[0].author.login));\n }\n  \nfunction fetchText() {\n  const data = \"Honda's are awesome.\";\n  //anvil.call_js('called_by_js');\n  return data;\n}\n</script>"
 package_name: VehicleMaint
-runtime_options: {client_version: '3', server_spec: null, server_version: python3-full, version: 2}
+runtime_options:
+  client_version: '3'
+  server_spec: {}
+  server_version: python3-full
+  version: 2
 scheduled_tasks:
 - job_id: QMOVVXJA
   task_name: alert_upcoming_inspections
