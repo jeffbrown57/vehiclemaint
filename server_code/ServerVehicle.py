@@ -43,6 +43,7 @@ def get_vehicle_maint():
 @anvil.server.callable
 def add_vehicle_maint(vehicle_dict):
    if vehicle_dict['driver'] and vehicle_dict['vehicle']:
+     anvil.server.cookies.local['vehicle'] = vehicle_dict['vehicle']
      row_id = app_tables.vehicle_maint.add_row(**vehicle_dict)
      return row_id
     
